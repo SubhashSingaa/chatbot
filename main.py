@@ -32,7 +32,7 @@ def translate_role_for_streamlit(user_role):
 
 # Initialize chat session in Streamlit if not already present
 if "chat_session" not in st.session_state:
-    st.session_state.chat_session = gen_ai.start_chat(api_key=GOOGLE_API_KEY, history=[])
+    st.session_state.chat_session = model.start_chat(api_key=GOOGLE_API_KEY, history=[])
 
 
 # Display the chatbot's title on the page
